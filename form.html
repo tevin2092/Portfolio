@@ -9,11 +9,30 @@
         input[type="email"] {
             
             margin-top: 20px;
+            transition: background-color 2s;
                  
         }
+        textarea {
+            transition: background-color 2s;
+            animation-name: text-area;
+            animation-duration: 4s;
+            width: 30%;
+            
+        }
+        @keyframes text-area {
+            from {
+                width: 5%;
+            }
+            to {
+                width: 30%;
+            }
+        }
+
+
         input{
             margin-top: 30px;
             margin-bottom: 30px;
+            
         }
         body{
             width: 70%;
@@ -31,16 +50,46 @@
         }
 
         #name-email{
-    background-color: lightseagreen;
+    background-color: rgb(35, 134, 35);
     
 }
 
 #gender-country{
-    background-color: lightgreen;
+    background-color: rgb(38, 236, 38);
 }
 
 #message-sub{
+    background-color: rgb(141, 240, 141);
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+textarea:focus {
+    background-color: lightgray;
+}
+
+input[type='text']:hover,
+input[type='email']:hover,
+textarea:hover {
     background-color: lightcoral;
+}
+
+input[type='submit']:active {
+    font-size: x-small;
+    
+}
+input[type='submit']:hover {
+    font-size: larger;
+    
+}
+
+input[type='submit'] {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    background-image: linear-gradient(to right, green, rgb(170, 250, 170));
+    cursor: pointer;
+    transition: font-size 1s;
 }
     </style>
 </head>
@@ -101,6 +150,7 @@
             <textarea
             name="message"
             id="message"
+            rows="10"
             ></textarea><br />
 
             <input type="checkbox" name="newsletter" id="newsletter">
