@@ -4,37 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css"/>
 </head>
 <body>
+    <div id="login-form">
     <h1> Login</h1>
+    
 
-    <form>
+    <form name="login" onsubmit="return validate();">
         <input 
         type="email"
         id="email"
         name="email"
-        placeholder="Email">
+        placeholder="Email"><br/>
+        
        
         <input 
         type="password"
         id="password"
         name="password"
-        placeholder="Password">
+        placeholder="Password"><br/>
 
-        <input 
-        type="checkbox"
-        id="checkbox"
-        name="checkbox">
-        <label for="checkbox">Show Password</label>
+        <div class="checkBox">
+            <input 
+            type="checkbox"
+            id="checkbox"
+            name="checkbox">
+            <label for="checkbox">Show Password</label><br/>
+        </div>
 
         <input 
         type="submit"
-        value="SignIn">
+        value="SIGN IN"><br/>
 
-        <p><a href="#">Forgot Username/Password?</a></p>
+        <p> Forgot <a href="#">Username/Password?</a></p>
         <p>Don' have an account? <a href="#">Sign Up</a></p>
         
     </form>
+    </div>
+    
+    <script src="assets/js/login.js"></script>
+    </body>
 </body>
 </html>
